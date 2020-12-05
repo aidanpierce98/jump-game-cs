@@ -83,7 +83,7 @@ namespace Jump_Game_C
 
             if (jumping == true)
             {
-                jumpSpeed = -8;
+                jumpSpeed = -9;
                 force -= 1;
             }
             else
