@@ -180,7 +180,12 @@ namespace Jump_Game_C
                 txtScore.Text = "Score: " + score + Environment.NewLine + "You Fell!";
             }
 
-            if ((player.Bounds.IntersectsWith(victory.Bounds)) && gotAllCoins)
+            if (player.Bounds.IntersectsWith(victory.Bounds) && gotAllCoins == false)
+            {
+                player.BringToFront();
+            }
+
+            if (player.Bounds.IntersectsWith(victory.Bounds) && gotAllCoins)
             {
                 gameTimer.Stop();
                 isGameOver = true;
@@ -190,6 +195,11 @@ namespace Jump_Game_C
         }
 
         private void Form1_ContextMenuStripChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void victory_Click(object sender, EventArgs e)
         {
 
         }

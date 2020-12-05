@@ -30,6 +30,7 @@ namespace Jump_Game_C
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.txtScore = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -168,9 +169,9 @@ namespace Jump_Game_C
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.Maroon;
-            this.pictureBox7.Location = new System.Drawing.Point(33, 212);
+            this.pictureBox7.Location = new System.Drawing.Point(-1, 212);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(160, 30);
+            this.pictureBox7.Size = new System.Drawing.Size(225, 30);
             this.pictureBox7.TabIndex = 1;
             this.pictureBox7.TabStop = false;
             this.pictureBox7.Tag = "Platform";
@@ -209,12 +210,14 @@ namespace Jump_Game_C
             // 
             // victory
             // 
-            this.victory.BackColor = System.Drawing.Color.DarkGreen;
-            this.victory.Location = new System.Drawing.Point(42, 135);
+            this.victory.BackColor = System.Drawing.Color.LightBlue;
+            this.victory.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("victory.BackgroundImage")));
+            this.victory.Location = new System.Drawing.Point(-3, 73);
             this.victory.Name = "victory";
-            this.victory.Size = new System.Drawing.Size(58, 71);
+            this.victory.Size = new System.Drawing.Size(148, 133);
             this.victory.TabIndex = 2;
             this.victory.TabStop = false;
+            this.victory.Click += new System.EventHandler(this.victory_Click);
             // 
             // enemyOne
             // 
